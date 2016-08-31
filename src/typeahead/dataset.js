@@ -158,10 +158,13 @@ var Dataset = (function() {
       var template = this.templates.pending;
 
       this._resetLastSuggestion();
-      template && this.$el.html(template({
+
+      var newHtml = template({
         query: query,
         dataset: this.name,
-      }));
+      });
+
+      template && this.$el.html() !== newHtml && this.$el.html(newHtml);
     },
 
     _renderNotFound: function renderNotFound(query) {
