@@ -139,6 +139,7 @@ var Dataset = (function() {
       this.$lastSuggestion = $fragment.children().last();
 
       this.$el.html($fragment)
+      .removeClass('tt-pending')
       .prepend(this._getHeader(query, suggestions))
       .append(this._getFooter(query, suggestions));
     },
@@ -159,12 +160,10 @@ var Dataset = (function() {
 
       this._resetLastSuggestion();
 
-      var newHtml = template({
-        query: query,
-        dataset: this.name,
-      });
-
-      template && this.$el.html() !== newHtml && this.$el.html(newHtml);
+      template && this.$el.is(':not(.tt-pending)') && this.$el.addClass('tt-pending').html(template({
+          query: query,
+          dataset: this.name
+      }));
     },
 
     _renderNotFound: function renderNotFound(query) {
@@ -174,11 +173,11 @@ var Dataset = (function() {
       template && this.$el.html(template({
         query: query,
         dataset: this.name,
-      }));
+      })).removeClass('tt-pending');
     },
 
     _empty: function empty() {
-      this.$el.empty();
+      this.$el.empty().removeClass('tt-pending');
       this._resetLastSuggestion();
     },
 
