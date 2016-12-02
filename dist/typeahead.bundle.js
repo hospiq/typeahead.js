@@ -2409,7 +2409,7 @@
             });
         }
         function buildHintFromInput($input, www) {
-            return $input.clone().addClass(www.classes.hint).removeData().css(www.css.hint).css(getBackgroundStyles($input)).prop("readonly", true).removeAttr("id name placeholder required").attr({
+            return $input.clone().addClass(www.classes.hint).removeData().css(www.css.hint).css(getBackgroundStyles($input)).prop("readonly", true).removeAttr("id name placeholder").prop("required", false).attr({
                 autocomplete: "off",
                 spellcheck: "false",
                 tabindex: -1

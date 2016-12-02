@@ -219,7 +219,8 @@
     .css(www.css.hint)
     .css(getBackgroundStyles($input))
     .prop('readonly', true)
-    .removeAttr('id name placeholder required')
+    .removeAttr('id name placeholder')
+    .prop('required', false) // jQuery v3 compatibility fix
     .attr({ autocomplete: 'off', spellcheck: 'false', tabindex: -1 });
   }
 
