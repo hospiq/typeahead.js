@@ -1,10 +1,49 @@
 # Changelog
 
-### 0.11.2 TBD, 2015
+### 1.2.0 September 25, 2017
+* Fix various typos [#137](https://github.com/corejavascript/typeahead.js/pull/137)
+* Add jQuery 3 support [#102](https://github.com/corejavascript/typeahead.js/pull/102)
+* Remove 'required' class from cloned input field [#125](https://github.com/corejavascript/typeahead.js/pull/125)
+* Add autoselect option [#154](https://github.com/corejavascript/typeahead.js/pull/154)
+* Update example link to corejavascript docs [#149](https://github.com/corejavascript/typeahead.js/pull/149)
+* Fix link in bloodhound docs [#134](https://github.com/corejavascript/typeahead.js/pull/134)
+* Minor change to docs to log object instead of assuming it's a string [#157](https://github.com/corejavascript/typeahead.js/pull/157)
 
+
+### 1.1.1 January 12, 2017
+* Fix hiding of .visuallyhidden style (introduced in #104) [#107](https://github.com/corejavascript/typeahead.js/pull/107)
+
+### 1.1.0 December 19, 2016
+* Improve screen reader support, ARIA, etc. [#104](https://github.com/corejavascript/typeahead.js/pull/104)
+* Remove non-essential files from NPM package [#100](https://github.com/corejavascript/typeahead.js/pull/100)
+
+### 1.0.1 November 17, 2016
+* v1.0.1 Released
+
+### 1.0.0-beta November 10, 2016
+* Add diacritic-insensitive highlighting [#51](https://github.com/corejavascript/typeahead.js/pull/51)
+* Allow for custom setting of maxPendingRequests [#62](https://github.com/corejavascript/typeahead.js/pull/62)
+* Fix incorrect event arguments [#65](https://github.com/corejavascript/typeahead.js/pull/65)
+* Fix incorrect limit with remote [#52](https://github.com/corejavascript/typeahead.js/pull/52)
+* Implement edge ngram tokenizer for Bloodhound [#93](https://github.com/corejavascript/typeahead.js/pull/93)
+* Remove requirement to have bower when installing via NPM [#74](https://github.com/corejavascript/typeahead.js/pull/74)
+* Fix codestyle issues [#86](https://github.com/corejavascript/typeahead.js/pull/86)
+* Add PhantomJS as dev dependency [#87](https://github.com/corejavascript/typeahead.js/pull/87)
+* Remove cursor onMouseLeave [#90](https://github.com/corejavascript/typeahead.js/pull/90)
 * Add matchAnyQueryToken option. [#2](https://github.com/corejavascript/typeahead.js/pull/2)
 * Update rendered-count after async results have displayed. [#8](https://github.com/corejavascript/typeahead.js/pull/8)
 * Add default on option to stop propagation when selecting an entry. [#13](https://github.com/corejavascript/typeahead.js/pull/13)
+* Fix link to contributing guidelines [#49](https://github.com/corejavascript/typeahead.js/pull/49)
+* Set cursor onHover [#28](https://github.com/corejavascript/typeahead.js/pull/28)
+* Complete to currently selected suggestion [#27](https://github.com/corejavascript/typeahead.js/pull/27)
+* Fix 404 links [#41](https://github.com/corejavascript/typeahead.js/pull/41)
+* Fix typos in comments in plugin.js [#37](https://github.com/corejavascript/typeahead.js/pull/37)
+* Update travis config to run latest supported node version [#25](https://github.com/corejavascript/typeahead.js/pull/25)
+* Update NPM package dependencies [#19](https://github.com/corejavascript/typeahead.js/pull/19)
+* Speed up Travis build [#22](https://github.com/corejavascript/typeahead.js/pull/22)
+* Fix npm error by adding license link [#18](https://github.com/corejavascript/typeahead.js/pull/18)
+* Move globally installed dependency [#16](https://github.com/corejavascript/typeahead.js/pull/16)
+
 
 ### 0.11.1 April 26, 2015
 

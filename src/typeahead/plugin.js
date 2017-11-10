@@ -33,7 +33,7 @@
 
       function attach() {
         var $input, $wrapper, $hint, $menu, defaultHint, defaultMenu,
-            eventBus, input, menu, typeahead, MenuConstructor;
+            eventBus, input, menu, status, typeahead, MenuConstructor;
 
         // highlight is a top-level config that needs to get inherited
         // from all of the datasets
@@ -75,11 +75,17 @@
           datasets: datasets
         }, www);
 
+        status = new Status({
+          $input: $input,
+          menu: menu
+        });
+
         typeahead = new Typeahead({
           input: input,
           menu: menu,
           eventBus: eventBus,
-          minLength: o.minLength
+          minLength: o.minLength,
+          autoselect: o.autoselect
         }, www);
 
         $input.data(keys.www, www);
@@ -218,10 +224,10 @@
     .removeData()
     .css(www.css.hint)
     .css(getBackgroundStyles($input))
-    .prop('readonly', true)
+    .prop({ readonly: true, required: false })
     .removeAttr('id name placeholder')
-    .prop('required', false) // jQuery v3 compatibility fix
-    .attr({ autocomplete: 'off', spellcheck: 'false', tabindex: -1 });
+    .removeClass('required')
+    .attr({ spellcheck: 'false', tabindex: -1 });
   }
 
   function prepInput($input, www) {
@@ -236,7 +242,7 @@
 
     $input
     .addClass(www.classes.input)
-    .attr({ autocomplete: 'off', spellcheck: false });
+    .attr({ spellcheck: false });
 
     // ie7 does not like it when dir is set to auto
     try { !$input.attr('dir') && $input.attr('dir', 'auto'); } catch (e) {}
